@@ -16,10 +16,10 @@
 .button.triple {
   grid-column: span 3;
 }
-.button.operator {
+.button.operation {
   background-color: #1da1f2;
   color: white;
 }
-.button.operator:active {
+.button.operation:active {
   background-color: #2094da;
 }
