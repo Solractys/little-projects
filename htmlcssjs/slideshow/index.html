@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>SlideShow</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="slides-container">
+
+    <div class="slides fade">
+      <img src="ColorWall-mpvrok.jpg" style="width: 100%;" alt="img1">
+    </div>
+
+    <div class="slides fade">
+      <img src="ColorWall-qdx1o7.png" style="width: 100%;" alt="img1">
+    </div>
+
+    <div class="slides fade">
+      <img src="ColorWall-vgxplp.png" style="width: 100%;" alt="img1">
+    </div>
+
+    <a class="prev" onclick={slidePlus(-1)}>
+      <<< /a>
+        <a class="next" onclick={slidePlus(1)}>>></a>
+  </div>
+  <script>
+
+    let slideIndex = 1;
+    showSlide(slideIndex);
+
+
+    function slidePlus(n) {
+      showSlide(slideIndex += n);
+    };
+
+    function currentSlide(n) {
+      showSlide(slideIndex = n);
+    }
+    function showSlide(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      if (n > slides.length) {slideIndex = 1};
+      if (n < 1) {slideIndex = slides.length};
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+*{ box-sizing: border-box;}
+.slides{display: none;}
+
+.slides-container{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+} 
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; 
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: 800;
+  font-size: 19px;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.next{
+  right: 0;
+}
+
+.prev:hover, .next.next{
+  background-color: #0e0e0e;
+}
+
+.fade {
+  animation-name: fade;
+  transition: 1.4s;
+}
+
+@keyframes fade {
+    from{opacity: .4;}
+    to{opacity: 1;}  
+}
