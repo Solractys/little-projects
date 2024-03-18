@@ -14,7 +14,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: red;
   font-weight: 800;
   font-size: 19px;
   transition: 0.3s ease;
@@ -26,7 +26,7 @@
   right: 0;
 }
 
-.prev:hover, .next.next{
+.prev:hover, .next:hover{
   background-color: #0e0e0e;
 }
 
